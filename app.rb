@@ -1,6 +1,7 @@
 require_relative 'advice'     # loads advice.rb
+require_relative 'monroe'     # loads monroe.rb
 
-class App
+class App < Monroe
   def call(env)
     case env['REQUEST_PATH']
     when '/'
